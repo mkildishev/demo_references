@@ -20,10 +20,10 @@ public class Monitor extends Stage implements EventListener {
         yAxis.setLabel("Y");
 
         LineChart<Number, Number> lineChart = new LineChart<>(xAxis, yAxis);
-        lineChart.setTitle("Случайный график");
+        lineChart.setTitle("Random graph");
 
         XYChart.Series<Number, Number> dataSeries = new XYChart.Series<>();
-        dataSeries.setName("Данные");
+        dataSeries.setName("Data");
 
         dataSeries.getData().add(new XYChart.Data<>(1, 2));
         dataSeries.getData().add(new XYChart.Data<>(2, 5));
