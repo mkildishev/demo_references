@@ -19,14 +19,11 @@ public class LogicController {
 
     @FXML
     public void addGarbage() {
-
         for (int i =  0; i < 1000000; ++i) {
             if (textField.getCache() == null) {
                 textField.setCache();
             }
-            textField.getCache().get().add(new String("thrash" + i));
+            textField.getCache().get().add(new String("Garbage" + i));
         }
-        System.out.println("done");
-
     }
 }

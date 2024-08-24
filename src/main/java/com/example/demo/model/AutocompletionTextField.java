@@ -12,7 +12,10 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
 import java.lang.ref.SoftReference;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -40,13 +43,13 @@ public class AutocompletionTextField extends TextField {
             } else {
 
                 //filter all possible suggestions depends on "Text", case insensitive
-                List<String> filteredcache = safeStreamOf(cache.get())
+                List<String> filteredCache = safeStreamOf(cache.get())
                                              .filter(e -> e.toLowerCase().contains(enteredText.toLowerCase()))
                                              .collect(Collectors.toList());
                 //some suggestions are found
-                if (!filteredcache.isEmpty()) {
+                if (!filteredCache.isEmpty()) {
                     //build popup - list of "CustomMenuItem"
-                    populatePopup(filteredcache, enteredText);
+                    populatePopup(filteredCache, enteredText);
                     if (!autocompleteWindow.isShowing()) { //optional
                         autocompleteWindow.show(AutocompletionTextField.this, Side.BOTTOM, 0, 0); //position of popup
                     }
