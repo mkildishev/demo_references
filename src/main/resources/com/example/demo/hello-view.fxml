@@ -38,8 +38,8 @@
       <children>
          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Current heap size:" />
          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Heap limit:" GridPane.rowIndex="1" />
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <Text fx:id="heapSize" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="88.0" GridPane.columnIndex="1" />
+         <Text fx:id="heapLimit" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="101.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       </children>
    </GridPane>
 </VBox>
